@@ -49,6 +49,7 @@
       // 擴展特定於 Angular 模板的推薦規則和 Prettier 配置
       "extends": [
         "plugin:@angular-eslint/template/recommended", // Angular 模板的推薦規則
+        "plugin:@angular-eslint/template/accessibility",
         "prettier", // 再次使用 eslint-config-prettier 來關閉衝突規則
         "plugin:prettier/recommended" // 啟用 Prettier 作為 ESLint 規則
       ],
