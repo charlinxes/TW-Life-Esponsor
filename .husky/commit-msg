@@ -1,0 +1,2 @@
+npx --no -- commitlint --edit "$1"
+# 這行執行 commitlint 來檢查提交信息

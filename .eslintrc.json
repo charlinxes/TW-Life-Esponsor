@@ -1,0 +1,58 @@
+{
+  // 指定這是項目的根配置文件，ESLint 不會在父目錄中查找其他配置文件
+  "root": true,
+
+  // 忽略 "projects" 目錄下的所有文件
+  // 這通常用於多專案工作空間，每個子專案可能有自己的 ESLint 配置
+  // 如希望 lint 所有專案，可以移除或修改這一行
+  "ignorePatterns": ["projects/**/*"],
+
+  // 為不同類型的文件指定不同的規則
+  "overrides": [
+    {
+      // 這個配置適用於所有的 TypeScript 文件
+      "files": ["*.ts"],
+      // 擴展（繼承）多個推薦的配置
+      "extends": [
+        "eslint:recommended", // ESLint 的基本推薦規則
+        "plugin:@typescript-eslint/recommended", // TypeScript 特定的推薦規則
+        "plugin:@angular-eslint/recommended", // Angular 特定的推薦規則
+        "plugin:@angular-eslint/template/process-inline-templates", // 處理內聯模板的規則
+        "prettier", // 使用 eslint-config-prettier 來關閉所有可能與 Prettier 衝突的 ESLint 規則
+        "plugin:prettier/recommended" // 啟用 eslint-plugin-prettier 和 eslint-config-prettier
+      ],
+      // 定義特定的規則
+      "rules": {
+        // 強制指令選擇器的命名約定
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        // 強制組件選擇器的命名約定
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      // 這個配置適用於所有的 HTML 文件
+      "files": ["*.html"],
+      // 擴展特定於 Angular 模板的推薦規則和 Prettier 配置
+      "extends": [
+        "plugin:@angular-eslint/template/recommended", // Angular 模板的推薦規則
+        "prettier", // 再次使用 eslint-config-prettier 來關閉衝突規則
+        "plugin:prettier/recommended" // 啟用 Prettier 作為 ESLint 規則
+      ],
+      "rules": {}
+    }
+  ]
+}

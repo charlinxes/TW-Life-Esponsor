@@ -1,4 +1,42 @@
 {
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    // angular 開發工具
+    "angular.ng-template",
+    // 統一 IDE 編輯器的設定
+    "editorconfig.editorconfig",
+    // 自動添加 close tag
+    "formulahendry.auto-close-tag",
+    // 編輯時，自動更改配對的 tag Name
+    "formulahendry.auto-rename-tag",
+    // 英文拼寫檢查
+    "streetsidesoftware.code-spell-checker",
+    // 提供多種註解樣式(通過 ! / ? / TODO 前綴)
+    "aaron-bond.better-comments",
+    // css peek 功能：按住 ctrl 並 hover css，自動抓取對應的css位置
+    "pranaygp.vscode-css-peek",
+    // eslint 搭配套件
+    "dbaeumer.vscode-eslint",
+    // 套用各語言的預設 gitignore 設定
+    "codezombiech.gitignore",
+    // 提供 git 基本 GUI
+    "eamodio.gitlens",
+    // image 預覽
+    "kisstkondoros.vscode-gutter-preview",
+    // sass/scss 編譯成 css 工具
+    "glenn2223.live-sass",
+    // 提供時時更新的預覽 server
+    "ritwickdey.LiveServer",
+    // prettier
+    "esbenp.prettier-vscode",
+    // tailwindcss 輔助
+    "bradlc.vscode-tailwindcss",
+    // 無效 spaces 提示
+    "shardulm94.trailing-spaces",
+    // vscode-icons 圖示
+    "vscode-icons-team.vscode-icons",
+    // 提醒和錯誤，在該行左邊會有icon提示
+    "igorsbitnev.error-gutters",
+    // 提醒和錯誤，不需要hover，會直接呈現在該行
+    "usernamehw.errorlens"
+  ]
 }
