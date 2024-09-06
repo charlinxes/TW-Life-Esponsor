@@ -2,6 +2,8 @@
   "recommendations": [
     // angular 開發工具
     "angular.ng-template",
+    // angular 開發工具
+    "tomwhite007.rename-angular-component",
     // 統一 IDE 編輯器的設定
     "editorconfig.editorconfig",
     // 自動添加 close tag
